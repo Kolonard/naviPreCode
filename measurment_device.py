@@ -93,8 +93,8 @@ class inertial_module_unit(measurment):
         self.state  = temp[1]
         self.grs    = [val / self.GRS_SF for val in temp[2:5]]
         self.acc    = [val / self.ACC_SF for val in temp[5:8]]
-        self.grs[0], self.grs[1], self.grs[2] = -self.grs[0], self.grs[2], self.grs[1]
-        self.acc[0], self.acc[1], self.acc[2] = -self.acc[0], self.acc[2], self.acc[1]
+        # self.grs[0], self.grs[1], self.grs[2] = -self.grs[0], self.grs[2], self.grs[1]
+        # self.acc[0], self.acc[1], self.acc[2] = -self.acc[0], self.acc[2], self.acc[1]
         self.tmp    = temp[8]   / 132.48 + 25
 
     def _log(self):
